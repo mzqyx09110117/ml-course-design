@@ -1,0 +1,62 @@
+=== individual members (OOF acc) ===
+       T/ema  0.7191
+       Z/ema  0.7188
+      P7/ema  0.7188
+       Q/ema  0.7184
+      P7/raw  0.7183
+       T/raw  0.7182
+       V/ema  0.7182
+  SWINPL4/raw  0.7180
+       V/raw  0.7179
+      VX/ema  0.7178
+  SWINPL4/ema  0.7177
+  PL4R34/raw  0.7177
+       Q/raw  0.7176
+      VX/raw  0.7176
+  PL4R34/ema  0.7175
+       Z/raw  0.7175
+       W/ema  0.7159
+       M/ema  0.7156
+       N/ema  0.7152
+       U/ema  0.7149
+       U/raw  0.7147
+       W/raw  0.7146
+       N/raw  0.7129
+       M/raw  0.7116
+       G/ema  0.7087
+       F/ema  0.7077
+    R192/ema  0.7072
+    R192/raw  0.7068
+    SWIN/ema  0.7064
+    SWIN/raw  0.7061
+       F/raw  0.7051
+       C/ema  0.7040
+       K/ema  0.7039
+       G/raw  0.7038
+       D/ema  0.7018
+       L/ema  0.7013
+       C/raw  0.6995
+       K/raw  0.6991
+       L/raw  0.6987
+       B/ema  0.6970
+       A/ema  0.6968
+       D/raw  0.6960
+       A/raw  0.6920
+       B/raw  0.6893
+=== greedy[prob] OOF acc = 0.7396 after 7 picks ===
+  weights: T/ema=1, VX/ema=1, D/ema=2, U/raw=1, V/raw=1, Z/raw=1
+=== greedy[log] OOF acc = 0.7408 after 10 picks ===
+  weights: T/ema=1, V/ema=2, U/raw=1, D/ema=1, SWINPL4/ema=1, P7/raw=1, F/ema=1, VX/ema=1, Q/ema=1
+chosen space: log (OOF 0.7408)
+continuous refine: 0.7408 -> 0.7415 (10 members, +0.0007)
+ensemble OOF acc = 0.7415
+stacker (LR on log-probs, 5x CV): OOF 0.7351
+keeping the weighted average (stacker not clearly better)
+bias calibration: [0.0, 0.0, -0.06, 0.008, 0.045, 0.0] -> OOF 0.7417 (+0.0002)
+dup rule: sim>=0.99, conf<0.5, blend w=1.0 -> OOF 0.7416 (+0.0001), replaced 24/28275 (best 0.7420)
+dup correction applied to the test set: 3 of 7065 samples
+wrote work/sub_v9_vx.csv (7065 rows)
+test label distribution: 0:0.133, 1:0.114, 2:0.262, 3:0.170, 4:0.115, 5:0.206
+train label distribution: 0:0.140, 1:0.145, 2:0.254, 3:0.172, 4:0.113, 5:0.175
+saved ensemble test probabilities -> /home/mzqyx09110117/桌面/task2/work/test_probs_ens.npy
+saved pseudo-label probabilities -> /home/mzqyx09110117/桌面/task2/work/pl_probs.npy

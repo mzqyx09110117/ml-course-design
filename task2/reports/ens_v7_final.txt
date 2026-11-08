@@ -1,0 +1,51 @@
+=== individual members (OOF acc) ===
+       T/ema  0.7191
+       Q/ema  0.7184
+       T/raw  0.7182
+  SWINPL4/raw  0.7180
+  SWINPL4/ema  0.7177
+  PL4R34/raw  0.7177
+       Q/raw  0.7176
+  PL4R34/ema  0.7175
+       M/ema  0.7156
+       N/ema  0.7152
+       N/raw  0.7129
+       M/raw  0.7116
+       G/ema  0.7087
+       F/ema  0.7077
+    R192/ema  0.7072
+    R192/raw  0.7068
+    SWIN/ema  0.7064
+    SWIN/raw  0.7061
+       F/raw  0.7051
+       C/ema  0.7040
+       K/ema  0.7039
+       G/raw  0.7038
+       D/ema  0.7018
+       L/ema  0.7013
+       C/raw  0.6995
+       K/raw  0.6991
+       L/raw  0.6987
+       B/ema  0.6970
+       A/ema  0.6968
+       D/raw  0.6960
+       A/raw  0.6920
+       B/raw  0.6893
+=== greedy[prob] OOF acc = 0.7389 after 14 picks ===
+  weights: T/ema=1, SWINPL4/ema=1, N/raw=1, D/ema=1, K/ema=1, SWINPL4/raw=2, N/ema=1, Q/ema=1, A/ema=1, L/ema=1, PL4R34/ema=1, F/ema=1, R192/raw=1
+=== greedy[log] OOF acc = 0.7382 after 9 picks ===
+  weights: T/ema=1, SWINPL4/ema=1, D/ema=2, N/raw=1, K/ema=1, PL4R34/ema=1, SWINPL4/raw=1, Q/raw=1
+chosen space: prob (OOF 0.7389)
+continuous refine: 0.7389 -> 0.7394 (13 members, +0.0005)
+ensemble OOF acc = 0.7394
+spec blend (tri[0,1,3]): w=0.0 OOF 0.7394 (base 0.7394) [candidates: w0.1:0.7386, w0.2:0.7376, w0.3:0.7374, w0.4:0.7352, w0.5:0.7339]
+stacker (LR on log-probs, 5x CV): OOF 0.7337
+keeping the weighted average (stacker not clearly better)
+bias calibration: [0.0, 0.0, 0.0, 0.0, -0.03, 0.0] -> OOF 0.7395 (+0.0001)
+dup rule: sim>=0.99, conf<0.5, blend w=1.0 -> OOF 0.7394 (+0.0000), replaced 28/28275 (best 0.7398)
+dup correction applied to the test set: 8 of 7065 samples
+wrote work/sub_v7_final.csv (7065 rows)
+test label distribution: 0:0.132, 1:0.116, 2:0.262, 3:0.171, 4:0.112, 5:0.207
+train label distribution: 0:0.140, 1:0.145, 2:0.254, 3:0.172, 4:0.113, 5:0.175
+saved ensemble test probabilities -> /home/mzqyx09110117/桌面/task2/work/test_probs_ens.npy
+saved pseudo-label probabilities -> /home/mzqyx09110117/桌面/task2/work/pl_probs.npy

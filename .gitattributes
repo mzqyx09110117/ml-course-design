@@ -1,0 +1,18 @@
+# 统一换行符，避免跨平台提交出现整文件 diff
+* text=auto eol=lf
+
+*.py     text
+*.md     text
+*.txt    text
+*.csv    text
+*.json   text
+*.sh     text eol=lf
+*.ipynb  text eol=lf
+
+# notebook 按代码统计，不做 diff
+*.ipynb  linguist-documentation=false
+*.ipynb  linguist-detectable=true
+
+# 日志与结果文件不参与语言统计
+logs/*     linguist-detectable=false
+*.log      text

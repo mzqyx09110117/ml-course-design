@@ -1,0 +1,31 @@
+loaded runs_v1/f0_s1/best.pt step 2250 val 0.813879224225187
+loaded runs_v1/f0_s1/last.pt step 2500 val 0.813879224225187
+loaded runs_v1/f1_s1/best.pt step 2250 val 0.8204840612895256
+loaded runs_v1/f1_s1/last.pt step 2500 val 0.8204840612895256
+loaded runs_v1/f2_s1/best.pt step 2500 val 0.7729164989521958
+loaded runs_v1/f2_s1/last.pt step 2500 val 0.7729164989521958
+loaded runs_v1/f3_s1/best.pt step 2500 val 0.8358141853438875
+loaded runs_v1/f3_s1/last.pt step 2500 val 0.8358141853438875
+loaded runs_v1/f4_s1/best.pt step 2500 val 0.8244637849659208
+loaded runs_v1/f4_s1/last.pt step 2500 val 0.8244637849659208
+test 1 vessel_frac 0.0865
+test 2 vessel_frac 0.0843
+test 3 vessel_frac 0.0795
+test 4 vessel_frac 0.0856
+test 5 vessel_frac 0.0974
+test 6 vessel_frac 0.0970
+test 7 vessel_frac 0.0947
+test 8 vessel_frac 0.0903
+test 9 vessel_frac 0.0937
+test 10 vessel_frac 0.0898
+test 11 vessel_frac 0.0772
+test 12 vessel_frac 0.0772
+test 13 vessel_frac 0.1077
+test 14 vessel_frac 0.0928
+test 15 vessel_frac 0.1054
+test 16 vessel_frac 0.0848
+test 17 vessel_frac 0.0955
+test 18 vessel_frac 0.0979
+test 19 vessel_frac 0.0833
+test 20 vessel_frac 0.0821
+wrote submission_ens10/submission.csv

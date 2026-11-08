@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+
+# 数据集与训练产物，体积大，不入库
+*.pt
+*.pth
+*.npz
+*.pkl
+*.joblib
+runs/
+runs_*/
+submission_*/
+fer_data/
+data/**/*.png
+data/**/*.jpg
+data/**/*.tif
+
+# 例外：复现融合所需的概率数组与训练标签
+!task1/inputs/oof/*.npy
+!task1/inputs/test/*.npy
+!task2/data/ytr.npy
+
+# 本地凭据
+kaggle.json
+.env
