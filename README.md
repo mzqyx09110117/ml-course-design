@@ -52,7 +52,11 @@ ml-course-design/
 
 ## 环境
 
-代码在 Linux 下用 Python 3.10 运行，单卡 NVIDIA GPU。主要依赖：
+实验在两套环境里完成。
+
+任务一、任务二在 Kaggle Notebook 上训练，GPU 为 Tesla T4 或 P100，PyTorch 2.x + CUDA。
+
+任务三、任务四在本机 Linux x86_64 上运行，16 核 CPU、14 GB 内存，PyTorch 2.14.1（CPU 版）。Python 3.13.9，timm 1.0.30，scikit-learn 1.7.2，OpenCV 5.0.0。主要依赖：
 
 ```
 torch torchvision timm
@@ -61,13 +65,11 @@ opencv-python pillow
 kaggle
 ```
 
-各任务的依赖略有差别，训练脚本只用到上面这些库。GPU 显存需求由数据规模决定，task1 和 task2 的训练显存在 8 GB 以上即可，task3 和 task4 的输入图像较大，建议 16 GB 以上。
+各任务的依赖略有差别，训练脚本只用到上面这些库。
 
 ## 数据与权重的说明
 
-比赛数据、模型权重、中间概率文件体积大，没有放入仓库。运行前需要把数据按各任务 README 的说明放回对应目录。仓库只保留能够用纯文本或小体积 CSV 表达的部分：配置、日志、指标和最终提交文件。
-
-`task1/inputs/` 下保留了体积很小（每个 10 KB 左右）的折外概率与测试概率数组，`task2/data/ytr.npy` 是训练标签数组。这些文件是复现融合结果的直接输入，不属于原始图像数据。
+除 `task1/inputs/` 的 15 组小体积 OOF 与测试概率（每个约 10 KB，复现融合的直接输入）和 `task2/data/ytr.npy`（226 KB 训练标签）外，其余原始图像、模型权重、中间概率与缓存均不入库。运行前需要把数据按各任务 README 的说明放回对应目录。仓库只保留能够用纯文本或小体积 CSV 表达的部分：配置、日志、指标和最终提交文件。
 
 ## 复现方式
 
