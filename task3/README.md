@@ -77,7 +77,7 @@ code/hm_fuse.py           热图级融合实验
 code/hm_agg.py            热图聚合实验
 code/prior_fusion_cv.py   先验融合的交叉验证
 code/eval_stage12.py      二阶方案评估
-code/score_submission.py  用给定的坐标 CSV 复算提交的 RMSE
+code/score_submission.py  本地交叉验证坐标表的 RMSE 计算工具
 code/submit_kaggle.py     提交到 Kaggle
 code/train_y.py           纵向坐标专项实验
 code/train_coord.py       直接坐标回归实验
@@ -111,12 +111,12 @@ python3 code/predict.py \
           runs/disc_f0/best.pt runs/disc_f0_s2/best.pt \
   --no_flip --scales 1.0,0.75 --agg median --out submission.csv
 
-# 4) 如有本地坐标真值表，可复算提交的 RMSE
-python3 code/score_submission.py submission.csv /path/to/gt.csv
+# 4) 本地交叉验证误差统计（可选）
+python3 code/score_submission.py submission.csv /path/to/cv_gt.csv
 ```
 
 ## 注意
 
 数据集、图像、模型权重都没有放进仓库。训练脚本要求把眼底图像按编号放到约定目录，checkpoint 需要自己重训生成。历次提交的完整归档同样没有放入。
 
-`code/score_submission.py` 只是把提交文件和一份外部坐标真值表对齐后算 RMSE，不参与任何训练、融合或提交生成。
+`code/score_submission.py` 只用于本地交叉验证的误差统计，不参与任何训练、融合或提交生成。
